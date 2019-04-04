@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JS</title>
+
+  </head>
+  <body>
+    <p>猜一猜一個隨機生成0~10之間的整數</p>
+    <input id="myInput" type="text" />
+
+    <button id="myButton">提交</button>
+
+    <script type="text/javascript">
+
+
+      document.getElementById('myButton').onclick = function(){
+
+        var x = Math.random();
+
+        x = x * 11;
+
+        x = Math.floor(x);
+
+        console.log(x);
+
+        if (document.getElementById('myInput').value == x) {
+          alert('恭喜答對');
+        }else {
+          alert('您猜錯了! 這個數字是' + x);
+        }
+      }
+
+    </script>
+
+
+  </body>
+</html>
